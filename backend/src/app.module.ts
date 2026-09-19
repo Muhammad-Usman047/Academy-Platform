@@ -4,6 +4,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import databaseConfig from './config/database.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CoursesModule } from './modules/courses/courses.module';
+import { StudentsModule } from './modules/students/students.module';
+import { EnrollmentsModule } from './modules/enrollments/enrollments.module';
+import { CertificatesModule } from './modules/certificates/certificates.module';
+import { VerificationModule } from './modules/verification/verification.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -24,6 +30,12 @@ import { AppService } from './app.service';
         synchronize: true, // ⚠️ dev only — auto-creates tables from entities. Turn off once you're in production.
       }),
     }),
+    CoursesModule,
+    StudentsModule,
+    EnrollmentsModule,
+    CertificatesModule,
+    VerificationModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
