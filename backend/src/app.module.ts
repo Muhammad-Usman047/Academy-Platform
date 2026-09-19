@@ -10,6 +10,7 @@ import { EnrollmentsModule } from './modules/enrollments/enrollments.module';
 import { CertificatesModule } from './modules/certificates/certificates.module';
 import { VerificationModule } from './modules/verification/verification.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { StatsModule } from './modules/stats/stats.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { AuthModule } from './modules/auth/auth.module';
     CertificatesModule,
     VerificationModule,
     AuthModule,
+    StatsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

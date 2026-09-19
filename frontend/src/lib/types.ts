@@ -18,3 +18,12 @@ export interface VerificationResult {
   startDate: string;
   completionDate: string | null;
 }
+
+export interface StatsOverview {
+  totalCourses: number;
+  totalStudents: number;
+  totalEnrollments: number;
+  completedCount: number;
+  inProgressCount: number;
+  completionRate: number;
+}
