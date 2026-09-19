@@ -27,3 +27,11 @@ export interface StatsOverview {
   inProgressCount: number;
   completionRate: number;
 }
+
+export interface Student {
+  id: number;
+  fullName: string;
+  email: string | null;
+  phone: string | null;
+  createdAt: string;
+}

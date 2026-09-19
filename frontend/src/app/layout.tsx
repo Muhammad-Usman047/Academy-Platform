@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Academy Platform",
-  description: "Learn Web Development, Graphic Designing, and more — with verifiable course completion.",
+  title: "Friends Vision Academy",
+  description: "Friends Vision Academy, Kahuta — practical courses in Web Development, Graphic Designing, and more, with verifiable course completion.",
 };
 
 export default function RootLayout({

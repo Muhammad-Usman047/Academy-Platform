@@ -8,7 +8,7 @@
   --color-accent: #c9a227;
   --color-accent-light: #e0be4e;
   --color-success: #059669;
-  --color-border: #e4e4e7;
+  --color-border: #dbdee3;
   --color-text: #27272a;
   --color-text-muted: #71717a;
 }
@@ -26,6 +26,10 @@
   --color-text-muted: var(--color-text-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+.input {
+  @apply w-full border border-border rounded-md px-4 py-2.5 text-ink focus:outline-none focus:ring-2 focus:ring-accent;
 }
 
 body {

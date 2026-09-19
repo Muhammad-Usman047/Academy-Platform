@@ -7,7 +7,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
   { href: "/about", label: "About" },
-  { href: "/verify", label: "Verify Certificate" },
+  // { href: "/verify", label: "Verify Certificate" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -17,8 +17,18 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-border">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <Link href="/" className="text-xl font-bold text-ink">
-          Academy<span className="text-accent">.</span>
+        <Link href="/" className="flex items-center gap-3">
+          <span className="w-10 h-10 rounded-full overflow-hidden border border-border flex-shrink-0">
+            <img
+              src="/images/logoa.jpg"
+              alt="Friends Vision Academy"
+              className="w-full h-full object-cover"
+            />
+          </span>
+          <span className="text-lg font-bold text-ink leading-tight hidden sm:block">
+            Friends Vision
+            <br className="hidden md:block" /> Academy
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -46,11 +56,27 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
